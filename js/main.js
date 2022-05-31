@@ -36,7 +36,8 @@ const run = (ev) => {
 
 elTexto.addEventListener('click', run);
 
-// кнопку оживити не вийшло
-elKnopka_start.addEventListener('click', run);
+// дивна кнопка
+//elKnopka_start.addEventListener('click', run);
+knopka.addEventListener('click', run);
 
 
