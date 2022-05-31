@@ -8,7 +8,7 @@ const elStatus = document.querySelector('.status')
 const elTexto = document.querySelector('.Text_na_start');
 
 const run = (ev) => {
-    elStatus.innerHTML = '>';
+    elStatus.innerHTML = '> ';
     const valueRefrigerator = elRefrigerator.value;
     const valueKovbasa = elKovbasa.value;
     const valueDverka = elDverka.value;
