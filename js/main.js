@@ -1,5 +1,6 @@
 
-const elKnopka_start = document.querySelector('select[name="knopka_start"]');
+const elKnopka_start = document.querySelector('input[name="knopka_start"]');
+
 const elRefrigerator = document.querySelector('select[name="refrigerator_isnue"]');
 const elKovbasa = document.querySelector('select[name="kovbasa_kuplena"]');
 const elDverka = document.querySelector('select[name="dverka_vidkryta"]')
@@ -37,7 +38,7 @@ const run = (ev) => {
 elTexto.addEventListener('click', run);
 
 // дивна кнопка
-//elKnopka_start.addEventListener('click', run);
-knopka.addEventListener('click', run);
+elKnopka_start.addEventListener('click', run);
+//knopka.addEventListener('click', run);
 
 
