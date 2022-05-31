@@ -4,40 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scake=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <title>Document</title>
-    <style>
-        .err-style {
-            border: 3px solid  red;
-            color: red;
-        }
-        .first-div {
-            background-color: #c2c2c2;
-        }
-    </style>
 </head>
 <body>
-    <div class="first-div">Текст в діві</div>
-
-    <input type="text" name="first-input" value="Текст в інпуті">
-    <input type="text" name="second-input"><br><br>
-
+//<input type="button" name="knopka_start" value="Почати полювання на ковбасу!"><br>
+<div class="Text_na_start">Почати полювання на ковбасу!</div><br><br>
     <label>
-        perimeter
-        <select name="perimetr">
-            <option value="alarm">Alarm!</option>
-            <option value="safe">Safe</option>
+        Чи є у нас вдома холодильник'?
+        <select name="refrigerator_isnue">
+            <option value="yes">Так</option>
+            <option value="no">Ні</option>
             </select>
-    </label>    
+    </label><br>    
     <label>
-        power
-        <select name="power">
-            <option value="off">Off</option>
-            <option value="on">On</option>
-        </select>
-    </label>
+        Чи купляли ми ковбасу?
+        <select name="kovbasa_kuplena">
+            <option value="yes">Звісно!</option>
+            <option value="no">Ні</option>
+            </select>
+    </label><br>    
+    <label>
+        Може дверцята холодильника зараз відкриті??
+        <select name="dverka_vidkryta">
+            <option value="yes">Так</option>
+            <option value="no">Ні</option>
+            </select>
+    </label><br><br>  
+
+
     <div class="status">
-    status: <span></span>
-</div>
+    ><span></span>
+    </div>
 
 
     <script src="./js/main.js"></script>

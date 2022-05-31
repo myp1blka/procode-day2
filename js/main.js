@@ -1,25 +1,42 @@
 
-const elPerimetr = document.querySelector('select[name="perimetr"]');
-const elPower = document.querySelector('select[name="power"]');
-const elStatus = document.querySelector('.status > span')
+const elKnopka_start = document.querySelector('select[name="knopka_start"]');
+const elRefrigerator = document.querySelector('select[name="refrigerator_isnue"]');
+const elKovbasa = document.querySelector('select[name="kovbasa_kuplena"]');
+const elDverka = document.querySelector('select[name="dverka_vidkryta"]')
+const elStatus = document.querySelector('.status')
+
+const elTexto = document.querySelector('.Text_na_start');
 
 const run = (ev) => {
-    const valuePerimetr = elPerimetr.value;
-    const valuePower = elPower.value;
+    elStatus.innerHTML = '>';
+    const valueRefrigerator = elRefrigerator.value;
+    const valueKovbasa = elKovbasa.value;
+    const valueDverka = elDverka.value;
 
-
-    if(valuePower === 'off') {
-        elStatus.innerHTML = 'power off';
+    elStatus.insertAdjacentHTML('beforeend', 'Спробуємо поїсти ковбаси! =) <br><br>');
+    if(valueRefrigerator === 'no') {
+        elStatus.insertAdjacentHTML('beforeend', 'Але нажаль ми не маємо холодильника, тож і ковбаски ніде взяти :(<br>');
         return;
     }
-    if(valuePerimetr === 'safe') {
-        elStatus.innerHTML = 'safe';
+    if(valueKovbasa === 'no') {
+        elStatus.insertAdjacentHTML('beforeend', 'Але нажаль ніхто не закупив ковбаски :(<br>');
         return;
     }
-        elStatus.innerHTML = 'alarm';
+    if(valueDverka === 'no') {
+        elStatus.insertAdjacentHTML('beforeend', 'Відкриваємо дверцята..<br>');
+    }
+    else if(valueDverka === 'yes') {
+        elStatus.insertAdjacentHTML('beforeend', 'От же ж якась падлюка не закрила дверцята!<br>');
+    }
+    elStatus.insertAdjacentHTML('beforeend', 'Дістаємо ковбаску..<br>');
+    elStatus.insertAdjacentHTML('beforeend', 'Не забуваємо закрити дверцята!<br>');
+    elStatus.insertAdjacentHTML('beforeend', 'Смакуємо смачненьку ковбаску<br>');
 
 }
 
-elPerimetr.addEventListener('change',run);
-elPower.addEventListener('change',run);
+elTexto.addEventListener('click', run);
+
+// кнопку оживити не вийшло
+elKnopka_start.addEventListener('click', run);
+
 
